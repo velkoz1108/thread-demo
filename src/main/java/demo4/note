@@ -1,0 +1,4 @@
+Collections.synchronizedList()
+
+CopyOnWriteArrayList
+copy-on-write  写时复制
