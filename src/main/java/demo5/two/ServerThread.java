@@ -1,4 +1,4 @@
-package demo5;
+package demo5.two;
 
 import java.util.Random;
 

@@ -1,4 +1,4 @@
-package demo5;
+package demo5.one;
 
 import java.util.LinkedList;
 import java.util.Queue;
