@@ -1,7 +1,5 @@
 package demo5.two;
 
-import java.util.LinkedList;
-import java.util.Queue;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 
@@ -12,7 +10,7 @@ import java.util.concurrent.LinkedBlockingQueue;
  */
 
 public class RequestQueue {
-    //LinkedList非线程安全
+    //LinkedBlockingQueue 线程安全的队列  take   put
     private final BlockingQueue<Request> queue = new LinkedBlockingQueue<Request>();
 
     public synchronized Request getRequest() {
@@ -24,9 +22,10 @@ public class RequestQueue {
         return request;
     }
 
-    public synchronized void putRequest(Request request) {
-        //offer将元素添加到队列末尾
-        queue.offer(request);
-        notifyAll();
+    public void putRequest(Request request) {
+        try {
+            queue.put(request);
+        } catch (InterruptedException e) {
+        }
     }
 }
