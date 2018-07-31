@@ -1,2 +1,9 @@
-#2018-7-26
-1、
+#2018-7-31
+1、java.util.concurrent包中的队列
+BlockingQueue接口                    阻塞队列
+ArrayBlockingQueue类                 基于数组的BlockingQueue
+LinkedBlockingQueue类                基于链表的BlockingQueue
+PriorityBlockingQueue类              带有优先级的BlockingQueue
+DelayQueue类                         一定时间之后才可以take的BlockingQueue
+SynchronousQueue类                   直接传递的BlockingQueue
+ConcurrentLinkedQueue类              元素个数没有最大限制的线程安全队列

@@ -1,0 +1,13 @@
+ReentrantReadWriteLock类的主要特征
+1、公平性
+当创建ReentrantReadWriteLock类的实例时，我们可以选择锁的获取顺序是否要设为公平（fair）的。如果创建的实例为公平的，那么等待时间久的线程将可以优先获取锁。
+2、可重入性
+ReentrantReadWriteLock类的锁是可重入的（reentrant）。也就是说，Reader角色的线程可以获取“用于写入的锁”，Writer角色的线程也可以获取“用于读取的锁”
+3、降级锁
+ReentrantReadWriteLock类可以按照如下顺序将“用于写入的锁”降级为“用于读取的锁”
+获取用于写入的锁  --->  获取用于读取的锁  ---> 释放用于写入的锁
+4、便捷方法
+ReentrantReadWriteLock类提供了获取等待中的线程的个数的方法getQueueLength，以及检查是否获取了用于写入的锁的方法isWriteLock等便捷方法
+
+
+office中使用了ReentrantReadWriteLock
