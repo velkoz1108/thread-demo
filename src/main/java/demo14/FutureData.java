@@ -19,6 +19,7 @@ public class FutureData implements Data {
         notifyAll();
     }
 
+    @Override
     public synchronized String getContent() {
         while (!ready) {
             try {
