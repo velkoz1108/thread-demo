@@ -1,0 +1,14 @@
+MakerClientThread  发出“生成字符串”请求的线程
+DisplayClientThread  发出“显示字符串”请求的线程
+ActiveObject        定义“主动对象”的接口（API）的接口
+ActiveObjectFactory 创建“主动对象”的类
+Proxy               将方法调用转换为MethodRequest对象的类（实现了ActiveObject的接口）
+SchedulerThread    调用execute方法处理MethodRequest对象的类
+ActivationQueue    按顺序保存MethodRequest对象的类
+MethodRequest     表示请求的抽象类
+MakeStringRequest  makeString方法（生成字符串）对应的类。MethodRequest类的子类
+DisplayStringRequest  displayString方法（显示字符串）对应的类。MethodRequest类的子类
+Result              表示执行结果的抽象类
+FutureResult        在Future模式中表示执行结果的类
+RealResult          表示实际的执行结果的类
+Servant            执行实际处理的类（实现了ActiveObject接口）
