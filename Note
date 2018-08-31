@@ -22,3 +22,19 @@ java内存模型可以确保final字段在构造函数执行结束后可以正�
 
 使用synchronized或者volatile来保护在多个线程之间的共享的字段
 
+
+
+Java内存模型
+重排序                     ：所谓重排序（Reorder），是指编译器和Java虚拟机通过改变程序的处理顺序来优化程序。
+可见性
+synchronized
+volatile
+final
+Double-Checked Locking
+
+与Javan内存模型交互时的指南
+1、使用synchronized或volatile来保护在多个线程之间共享的字段
+2、将常量字段设置为final
+3、不要从构造函数中泄露this
+
+

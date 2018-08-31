@@ -1,0 +1,3 @@
+当ExecutorService不接受请求（任务）时抛出         RejectedExecutionException
+当Future(FutureTask)被取消时抛出                 CancellationException
+若执行请求（任务）时发生异常，则抛出               ExecutionException
