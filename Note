@@ -7,3 +7,18 @@ PriorityBlockingQueue类              带有优先级的BlockingQueue
 DelayQueue类                         一定时间之后才可以take的BlockingQueue
 SynchronousQueue类                   直接传递的BlockingQueue
 ConcurrentLinkedQueue类              元素个数没有最大限制的线程安全队列
+
+
+volatile不会进行线程的互斥操作
+关于重排序和可见性这两点，volatile的作用与synchronized的作用非常相似。但是volatile不进行线程的互斥处理。也就是说，访问volatile字段的线程不会进入等待队列。
+
+
+访问volatile字段会产生性能开销
+
+Java规范无法确保对long和double的赋值操作的原子性。
+java.util.concurrent.atomic包 AtomicInteger AtomicLong等用于原子操作的类
+
+java内存模型可以确保final字段在构造函数执行结束后可以正确地被看到
+
+使用synchronized或者volatile来保护在多个线程之间的共享的字段
+
